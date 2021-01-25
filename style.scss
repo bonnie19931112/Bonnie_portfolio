@@ -1,0 +1,58 @@
+$color-gray: rgb(158, 157, 157);
+$color-white: rgb(255, 255, 255);
+// 加入字體至 google fonts 選取要的字體 點 +select...@import~@複製 字體貼上
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 微軟正黑體;
+}
+
+nav {
+    display: grid;
+    grid-template-columns:15% auto 15%;
+    text-align: center;
+    background: $color-gray;
+    padding: 30px;
+    color: $color-white;
+    
+}
+
+    #link {
+         a {
+         color: $color-white;
+         text-decoration: none;
+         font-size: 20;
+         padding: 0 60px;
+         transition: 0.3s;
+        //  行內區塊元素 不會自己一行 且可縮放
+         display: inline-block;  
+
+         &:hover {
+            font-size: 20px;
+            transform: scale(1.5);
+        }
+        }
+    }
+
+    #social {
+        a {
+            transition: 0.5s;
+            padding: 0 10px;
+
+            &:hover {
+                filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
+            }
+        }
+    }
+
+.logo {
+    font-size: 36px !important;
+    transition:  0.5s;
+    font-family: 'Bodoni Moda', serif;
+
+     &:hover {
+            font-size: 30px;
+     }
+}

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 微軟正黑體;
+}
+
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% auto 15%;
+      grid-template-columns: 15% auto 15%;
+  text-align: center;
+  background: #9e9d9d;
+  padding: 30px;
+  color: white;
+}
+
+#link a {
+  color: white;
+  text-decoration: none;
+  font-size: 20;
+  padding: 0 60px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+#link a:hover {
+  font-size: 20px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#social a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 0 10px;
+}
+
+#social a:hover {
+  -webkit-filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
+          filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
+}
+
+.logo {
+  font-size: 36px !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.logo:hover {
+  font-size: 30px;
+}
+/*# sourceMappingURL=style.css.map */
