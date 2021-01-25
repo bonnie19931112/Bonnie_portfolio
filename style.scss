@@ -1,5 +1,6 @@
-$color-gray: rgb(158, 157, 157);
+$color-gray: rgb(224, 222, 222);
 $color-white: rgb(255, 255, 255);
+$color-darkgray: rgb(71, 71, 71);
 // 加入字體至 google fonts 選取要的字體 點 +select...@import~@複製 字體貼上
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
 
@@ -15,16 +16,16 @@ nav {
     text-align: center;
     background: $color-gray;
     padding: 30px;
-    color: $color-white;
+    color: $color-darkgray;
     
 }
 
     #link {
          a {
-         color: $color-white;
+         color: $color-darkgray;
          text-decoration: none;
          font-size: 20;
-         padding: 0 60px;
+         padding: 0 70px;
          transition: 0.3s;
         //  行內區塊元素 不會自己一行 且可縮放
          display: inline-block;  
@@ -41,6 +42,7 @@ nav {
             transition: 0.5s;
             padding: 0 10px;
 
+
             &:hover {
                 filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
             }
@@ -55,4 +57,38 @@ nav {
      &:hover {
             font-size: 30px;
      }
+}
+
+#banner {
+    .slick-prev {
+        left: 50px;
+        z-index: 2;
+    }
+    .slick-next {
+        right: 50px;
+        z-index: 2;
+    }
+    .slick-dots {
+        bottom: 50px;
+        z-index: 2;
+    }
+    // 迴圈
+    @for $i from 1 to 3 {
+         .banner#{$i} {
+         background-image: url(./img/banner#{$i}.jpg);
+         height: 100vh;
+         text-align: center;
+         color: $color-white;
+
+         &:focus {
+             outline: none;
+         }
+
+        h1 {
+             padding: 300px 0px 100px;
+             font-size: 60px;
+             text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }

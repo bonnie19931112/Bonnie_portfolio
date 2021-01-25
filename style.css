@@ -12,16 +12,16 @@ nav {
   -ms-grid-columns: 15% auto 15%;
       grid-template-columns: 15% auto 15%;
   text-align: center;
-  background: #9e9d9d;
+  background: #e0dede;
   padding: 30px;
-  color: white;
+  color: #474747;
 }
 
 #link a {
-  color: white;
+  color: #474747;
   text-decoration: none;
   font-size: 20;
-  padding: 0 60px;
+  padding: 0 70px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
@@ -53,5 +53,54 @@ nav {
 
 .logo:hover {
   font-size: 30px;
+}
+
+#banner .slick-prev {
+  left: 50px;
+  z-index: 2;
+}
+
+#banner .slick-next {
+  right: 50px;
+  z-index: 2;
+}
+
+#banner .slick-dots {
+  bottom: 50px;
+  z-index: 2;
+}
+
+#banner .banner1 {
+  background-image: url(./img/banner1.jpg);
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#banner .banner1:focus {
+  outline: none;
+}
+
+#banner .banner1 h1 {
+  padding: 300px 0px 100px;
+  font-size: 60px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#banner .banner2 {
+  background-image: url(./img/banner2.jpg);
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+#banner .banner2:focus {
+  outline: none;
+}
+
+#banner .banner2 h1 {
+  padding: 300px 0px 100px;
+  font-size: 60px;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */

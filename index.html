@@ -5,6 +5,9 @@
     <!-- 於後方輸入, user-scalable=no -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
+    <!-- 輪播需slick -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- 使用SASS需link style.css -->
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -45,5 +48,41 @@
             <h2>標題2</h2>
         </div>
     </div>
+    <!-- 輪播需JQuery至上 https://developers.google.com/speed/libraries#jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 輪播需slick https://github.com/kenwheeler/slick/-->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
+
+
+    <!-- 最新消息 -->
+    <section id="news">
+        <div id="news-content">
+            <h1>標題一</h1>
+            <!-- (.news-card>img+h3{標題三}+p(lorem10)+button{按鈕})*3 -->
+            <div class="news-card">
+                <!-- lorem10是建立文字 -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, rem.
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p></p>
+                <button>按鈕</button>
+            </div>
+            <div class="news-card">
+                Voluptate doloribus ab quidem odit nobis voluptatibus laborum a! Amet.
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p></p>
+                <button>按鈕</button>
+            </div>
+            <div class="news-card">
+                Deserunt atque molestiae eveniet consectetur quae! Consectetur dicta modi molestias.
+                <img src="" alt="">
+                <h3>標題三</h3>
+                <p></p>
+                <button>按鈕</button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
