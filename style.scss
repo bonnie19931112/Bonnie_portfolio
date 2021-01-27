@@ -1,62 +1,68 @@
 $color-gray: rgb(224, 222, 222);
 $color-white: rgb(255, 255, 255);
 $color-darkgray: rgb(71, 71, 71);
+$text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+$box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 // 加入字體至 google fonts 選取要的字體 點 +select...@import~@複製 字體貼上
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap");
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 微軟正黑體;
 }
 
+// 導覽列
 nav {
     display: grid;
-    grid-template-columns:15% auto 15%;
+    grid-template-columns: 15% auto 15%;
     text-align: center;
     background: $color-gray;
-    padding: 30px;
+    padding: 35px 0;
     color: $color-darkgray;
-    
+    // 固定導覽列
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    box-shadow: $box-shadow;
 }
 
-    #link {
-         a {
-         color: $color-darkgray;
-         text-decoration: none;
-         font-size: 20;
-         padding: 0 70px;
-         transition: 0.3s;
+#link {
+    a {
+        color: $color-darkgray;
+        text-decoration: none;
+        font-size: 20;
+        padding: 0 70px;
+        transition: 0.3s;
         //  行內區塊元素 不會自己一行 且可縮放
-         display: inline-block;  
+        display: inline-block;
 
-         &:hover {
+        &:hover {
             font-size: 20px;
             transform: scale(1.5);
         }
+    }
+}
+
+#social {
+    a {
+        transition: 0.5s;
+        padding: 0 10px;
+
+        &:hover {
+            filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
         }
     }
-
-    #social {
-        a {
-            transition: 0.5s;
-            padding: 0 10px;
-
-
-            &:hover {
-                filter: invert(25%) sepia(10%) saturate(3036%) hue-rotate(329deg) brightness(98%) contrast(79%);
-            }
-        }
-    }
+}
 
 .logo {
     font-size: 36px !important;
-    transition:  0.5s;
-    font-family: 'Bodoni Moda', serif;
+    transition: 0.5s;
+    font-family: "Bodoni Moda", serif;
 
-     &:hover {
-            font-size: 30px;
-     }
+    &:hover {
+        font-size: 30px;
+    }
 }
 
 #banner {
@@ -73,22 +79,101 @@ nav {
         z-index: 2;
     }
     // 迴圈
-    @for $i from 1 to 3 {
-         .banner#{$i} {
-         background-image: url(./img/banner#{$i}.jpg);
-         height: 100vh;
-         text-align: center;
-         color: $color-white;
+    @for $i from 1 through 3 {
+        .banner#{$i} {
+            background-image: url(./img/banner#{$i}.jpg);
+            height: 100vh;
+            text-align: center;
+            color: $color-white;
 
-         &:focus {
-             outline: none;
-         }
+            &:focus {
+                outline: none;
+            }
 
-        h1 {
-             padding: 300px 0px 100px;
-             font-size: 60px;
-             text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            h1 {
+                padding: 300px 0px 100px;
+                font-size: 60px;
+                text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
             }
         }
     }
+}
+
+// 最新消息
+#news {
+    width: 1280px;
+    margin: 0 auto;
+
+    #news-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        .news-card {
+            box-shadow: $box-shadow;
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        h3 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+
+// 聯絡我
+form {
+    width: 1280px;
+    margin: 0 auto;
+
+    input {
+        width: 45%;
+        padding: 10px 5px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 300px;
+        margin: 30px 0;
+    }
+}
+// 統一樣式
+// 按鈕樣式
+.btn {
+    background: $color-darkgray;
+    color: $color-white;
+    padding: 20px 30px;
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+
+    &:hover {
+        border: 1px solid $color-gray;
+        background: $color-white;
+        color: $color-gray;
+    }
+}
+
+.title-big {
+    text-align: center;
+    padding: 10px 0 30px;
+    font-size: 30px;
+    font-weight: 900;
 }
