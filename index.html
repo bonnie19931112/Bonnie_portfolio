@@ -18,11 +18,11 @@
             
         </div>
         <div id="link">
-            <a href="">分頁</a>
-            <a href="">分頁</a>
+            <a href="">作品</a>
+            <a href="">文章</a>
             <a href="" class="logo">BONNIE</a>
-            <a href="">分頁</a>
-            <a href="">分頁</a>
+            <a href="">商品</a>
+            <a href="">聯絡</a>
         </div>
         <div id="social">
             <a href=""><img src="./img/YT.png" alt="YT"></i></a>
@@ -48,11 +48,7 @@
             <h2>標題2</h2>
         </div>
     </div>
-    <!-- 輪播需JQuery至上 https://developers.google.com/speed/libraries#jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- 輪播需slick https://github.com/kenwheeler/slick/-->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./main.js"></script>
+
 
 
     <!-- 最新消息 -->
@@ -84,10 +80,6 @@
 
 
     <!-- 最新作品 -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!-- 使用SASS需link style.css -->
-    <link rel="stylesheet" href="./style.css">
 
     <h1 class="title-big">最新作品</h1>
     <div id="works">
@@ -116,21 +108,31 @@
             <h2>標題二</h2>
         </div>
     </div>
+      
+
+    <h1 class="title-big">聯絡我</h1>
+    <!-- 表單元素 action"" 傳遞給後端頁面，通常是 .php -->
+    <!-- method GET 曝光表單資料 / POST 不會不曝光表單資料 -->
+    <form action="" method="POST">
+        <input type="name" name="user-name" placeholder="請輸入您的姓名" required>
+        <input type="email" name="user-email" placeholder="請輸入您的信箱" required>
+        <textarea></textarea>
+        <input type="submit" value="送出" class="btn">
+    </form>
+
+    <!-- 頁尾 -->
+    <footer>
+        <a href="" class="logo">BONNIE</a>
+        <small>&copy; BONNIE 2021.</small>
+        <a href="">作品</a>
+        <a href="">文章</a>
+        <a href="">商品</a>
+        <a href="">聯絡</a>
+    </footer>
         <!-- 輪播需JQuery至上 https://developers.google.com/speed/libraries#jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- 輪播需slick https://github.com/kenwheeler/slick/-->
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="./main.js"></script>
-
-
-    <h1 class="title-big">聯絡我</h1>
-    <!-- 表單元素 action"" 傳遞給後端頁面，通常是 .php -->
-    <form action="">
-        <input type="name" name="user-name">
-        <input type="email" name="user-email">
-        <textarea></textarea>
-        <input type="submit" value="送出">
-
-    </form>
 </body>
 </html>
