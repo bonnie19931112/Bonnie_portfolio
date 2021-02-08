@@ -46,6 +46,7 @@ nav {
   width: 100%;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  height: 120px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -59,6 +60,38 @@ nav {
   nav {
     padding: 20px 0;
   }
+}
+
+nav #link-work {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px;
+  vertical-align: 10px;
+  height: 300px;
+}
+
+nav #link-work:hover .sub-link {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+nav .sub-link {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  position: absolute;
+  top: 60px;
+  left: -10px;
+  background: #e0dede;
+}
+
+nav .sub-link a {
+  display: block !important;
+  padding: 15px 80px !important;
+  width: 180px !important;
 }
 
 @media screen and (max-width: 1024px) {
